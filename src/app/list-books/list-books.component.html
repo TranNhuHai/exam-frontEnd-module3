@@ -1,0 +1,32 @@
+<div class="container-fluid">
+  <h2>Book List</h2>
+  <form>
+    <table border="1">
+      <tr>
+        <th>STT</th>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Delete</th>
+        <th>Edit</th>
+        <th>Detail</th>
+      </tr>
+      <tr *ngFor="let book of books; index as i;">
+        <td>{{i +1}}</td>
+        <td>{{book.title}}</td>
+        <td>{{book.author}}</td>
+        <td>
+          <button (click)="deleteBook(book.id)">Delete</button>
+        </td>
+        <td>
+          <button (click)="editBook(book.id)">Edit</button>
+        </td>
+        <td>
+          <button (click)="detailBook(book.id)">Detail</button>
+        </td>
+      </tr>
+    </table>
+    <div *ngIf="message" style="text-align: center"><p style="color: red">{{ message }}</p></div>
+  </form>
+
+</div>
+

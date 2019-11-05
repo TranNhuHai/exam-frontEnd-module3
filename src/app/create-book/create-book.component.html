@@ -1,0 +1,24 @@
+<form #bookForm="ngForm" (ngSubmit)="createBook(bookForm)" >
+  <h4>Create new Book</h4>
+  <hr style="border: 1px solid black"/>
+  <div *ngIf="message"><p style="color: red">{{ message }}</p></div>
+  <div class="form-group">
+    <label>Title:</label>
+    <input type="text" name="title" ngModel class="form-control" style="border: 1px solid black"/>
+  </div>
+  <div>
+    <label>Author:</label>
+    <input type="text" class="form-control" name="author" ngModel style="border: 1px solid black">
+  </div>
+  <div>
+    <label>Description:</label>
+    <input type="text" class="form-control" name="description" ngModel style="border: 1px solid black">
+  </div>
+  <div class="text-center">
+    <button type="submit" class="btn btn-success" style="margin-right: 5px"><p>Create</p></button>
+  </div>
+
+</form>
+
+
+
